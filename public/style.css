@@ -1,0 +1,69 @@
+.pot {
+    width: 250px;
+    height: auto"
+
+}
+
+@media only screen and (max-width: 1400px) {
+    .pot {
+        width: 200px;
+        height: auto"
+
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pot {
+        width: 140px;
+        height: auto"
+
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .pot {
+        width: 80px;
+        height: auto"
+
+    }
+}
+
+body {
+    background-color: #554c5f;
+}
+
+#door-container {
+    display: flex;
+    justify-content: center;
+}
+
+#door {
+    
+}
+
+.doorclosed {
+    background: url("door.png");
+    height: 166px;
+    width: 133px;
+}
+
+.dooropening {
+    background: url("door.png");
+    height: 166px;
+    width: 133px;
+    animation-name: sprite;
+    animation-duration: 1s;
+    animation-timing-function: steps(5);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sprite {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -666px;
+    }
+}
