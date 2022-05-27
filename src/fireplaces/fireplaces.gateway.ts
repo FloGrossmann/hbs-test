@@ -23,7 +23,7 @@ export class FirePlacesGateway {
   @WebSocketServer() server: Server;
 
   @SubscribeMessage('msgToServer')
-  async handleMessage(client: Socket, payload: number): Promise<void> {
+  async handleMessage(client: Socket, payload: string): Promise<void> {
     this.firePlaceService.updateFirePlace(payload);
   }
 }

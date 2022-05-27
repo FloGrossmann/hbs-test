@@ -5,6 +5,7 @@ function togglePot(val) {
 }
 
 function sendBody(body) {
+    console.log(body)
     $.ajax({
         method: "POST",
         url: "http://localhost:3000/update",
