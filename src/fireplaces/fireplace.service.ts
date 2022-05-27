@@ -5,7 +5,7 @@ import { FirePlaceSendGateway } from './fireplace.send.gateway';
 
 export interface IFirePlace {
   value: boolean,
-  image: string,
+  class: string,
   index: number
 }
 
@@ -34,8 +34,8 @@ export class FirePlaceService {
       let on = Math.round(Math.random()) === 1;
       this.firePlaces.push({
         value: on,
-        image: on ? 'firepot-on.png' : 'firepot-off.png',
-        index: i
+        index: i,
+        class: on ? 'firepot firepot-on' : 'firepot firepot-off'
       });
     }
     this.shuffleArray(this.firePlaces);
@@ -53,7 +53,7 @@ export class FirePlaceService {
 
   toggleFirePlace(fireplace: IFirePlace) {
     fireplace.value = !fireplace.value;
-    fireplace.image = fireplace.value ? 'firepot-on.png' : 'firepot-off.png';
+    fireplace.class = fireplace.value ? 'firepot firepot-on' : 'firepot firepot-off';
   }
 
   updateFirePlace(index: number) {
