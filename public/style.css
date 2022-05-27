@@ -1,56 +1,35 @@
-.pot {
-    width: 250px;
-    height: auto"
-
-}
-
-@media only screen and (max-width: 1400px) {
-    .pot {
-        width: 200px;
-        height: auto"
-
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pot {
-        width: 140px;
-        height: auto"
-
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .pot {
-        width: 80px;
-        height: auto"
-
-    }
-}
-
 body {
     background-color: #554c5f;
+    display: flex;
+    flex-direction: column;
+}
+
+#fireplaces {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #door-container {
     display: flex;
     justify-content: center;
-}
-
-#door {
-    
+    align-items: center;
+    margin-top: auto;
 }
 
 .doorclosed {
     background: url("door.png");
     height: 166px;
     width: 133px;
+    transform: scale(1.8);
+    margin-top: 100px;
 }
 
 .dooropening {
     background: url("door.png");
     height: 166px;
     width: 133px;
+    transform: scale(1.8);
     animation-name: sprite;
     animation-duration: 1s;
     animation-timing-function: steps(5);
@@ -65,5 +44,54 @@ body {
 
     to {
         background-position: -666px;
+    }
+}
+
+.firepot {
+    background: url("firepot-animation.png");
+    height: 293px;
+    width: 134px;
+    animation-name: fire;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(8);
+    animation-fill-mode: forwards;
+    margin: 10px;
+}
+
+.firepot-on {
+    animation-iteration-count: infinite;
+}
+
+.firepot-off {
+    animation-iteration-count: 0;
+}
+
+.firepot-on:nth-child(2n) {
+    animation-delay: -2.5s
+}
+
+.firepot-on:nth-child(3n) {
+    animation-delay: -3.5s;
+}
+
+.firepot-on:nth-child(5n) {
+    animation-delay: 0s
+}
+
+.firepot-on:nth-child(7n) {
+    animation-delay: -5s
+}
+
+@keyframes fire {
+    0% {
+        background-position: -1072px;
+    }
+
+    50% {
+        background-position: 0px;
+    }
+    
+    100% {
+        background-position: -1072px;
     }
 }

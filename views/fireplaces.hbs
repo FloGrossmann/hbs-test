@@ -1,5 +1,5 @@
 {{#each firePlaces}}
-<button style="padding: 0px; border: 0px; background-color: #554c5f" onclick="togglePot({{this.index}})">
-    <img class="pot" src={{{this.image}}}></img>
+<button class="{{this.class}}" style="padding: 0px; border: 0px; background-color: #554c5f"
+    onclick="togglePot({{this.index}})">
 </button>
 {{/each}}
