@@ -30,14 +30,15 @@ body {
     height: 166px;
     width: 133px;
     transform: scale(1.8);
-    animation-name: sprite;
+    animation-name: door;
     animation-duration: 1s;
     animation-timing-function: steps(5);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    margin-top: 100px;
 }
 
-@keyframes sprite {
+@keyframes door {
     from {
         background-position: 0px;
     }
@@ -95,3 +96,61 @@ body {
         background-position: -1072px;
     }
 }
+
+@media only screen and (max-width: 1400px) {
+    .firepot {
+        background: url("firepot-animation_small.png");
+        height: 164px;
+        width: 67px;
+        animation-name: fire2;
+        animation-duration: 1.5s;
+        animation-timing-function: steps(8);
+        animation-fill-mode: forwards;
+        margin: 10px;
+    }
+
+    @keyframes fire2 {
+        0% {
+            background-position: -536px;
+        }
+    
+        50% {
+            background-position: 0px;
+        }
+        
+        100% {
+            background-position: -536px;
+        }
+    }
+
+    .doorclosed {
+        background: url("door_small.png");
+        height: 88px;
+        width: 67px;
+        transform: scale(1.8);
+        margin-top: 100px;
+    }
+    
+    .dooropening {
+        background: url("door_small.png");
+        height: 88px;
+        width: 67px;
+        transform: scale(1.8);
+        animation-name: door;
+        animation-duration: 1s;
+        animation-timing-function: steps(5);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        margin-top: 100px;
+    }
+    
+    @keyframes door {
+        from {
+            background-position: 0px;
+        }
+    
+        to {
+            background-position: -333px;
+        }
+    }
+  }
