@@ -98,11 +98,46 @@ body {
 }
 
 .number {
-    margin-top: 200px;
     font-size: 20px;
 }
 
+.slab-on {
+    background: url("stoneslab.png");
+    height: 67px;
+    width: 134px;
+    background-position-y: 67px;
+    margin-top: 220px;
+    scale: 0.5;
+}
+
+.slab-off {
+    background: url("stoneslab.png");
+    height: 67px;
+    width: 134px;
+    background-position-y: 0px;
+    margin-top: 220px;
+    scale: 0.5;
+}
+
 @media only screen and (max-width: 1400px) {
+    .slab-on {
+        background: url("stoneslab_small.png");
+        height: 34px;
+        width: 67px;
+        background-position-y: 34px;
+        margin-top: 125px;
+        scale: 0.5;
+    }
+    
+    .slab-off {
+        background: url("stoneslab_small.png");
+        height: 34px;
+        width: 67px;
+        background-position-y: 0px;
+        margin-top: 125px;
+        scale: 0.5;
+    }
+
     .firepot {
         background: url("firepot-animation_small.png");
         height: 164px;
@@ -160,7 +195,7 @@ body {
     }
 
     .number {
-        margin-top: 100px;
+        margin-top: 5px;
         font-size: 14px;
     }
 }

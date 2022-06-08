@@ -1,6 +1,7 @@
 {{#each firePlaces}}
 <button class="{{this.class}}" style="padding: 0px; border: 0px; background-color: #554c5f"
-    onclick="togglePot('{{{this.index}}}')">
+    onclick="togglePot('{{{this.uuid}}}')">
+    <div class="{{this.slabClass}}"></div>
     <div class="number">{{inc @index}}</div>
 </button>
 {{/each}}
