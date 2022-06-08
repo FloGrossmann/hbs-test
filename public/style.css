@@ -91,10 +91,15 @@ body {
     50% {
         background-position: 0px;
     }
-    
+
     100% {
         background-position: -1072px;
     }
+}
+
+.number {
+    margin-top: 200px;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -113,11 +118,11 @@ body {
         0% {
             background-position: -536px;
         }
-    
+
         50% {
             background-position: 0px;
         }
-        
+
         100% {
             background-position: -536px;
         }
@@ -130,7 +135,7 @@ body {
         transform: scale(1.8);
         margin-top: 100px;
     }
-    
+
     .dooropening {
         background: url("door_small.png");
         height: 88px;
@@ -143,14 +148,19 @@ body {
         animation-fill-mode: forwards;
         margin-top: 100px;
     }
-    
+
     @keyframes door {
         from {
             background-position: 0px;
         }
-    
+
         to {
             background-position: -333px;
         }
     }
-  }
+
+    .number {
+        margin-top: 100px;
+        font-size: 14px;
+    }
+}
