@@ -1,10 +1,10 @@
-import { Logger } from '@nestjs/common';
-import { SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
-import { Socket } from 'dgram';
+import {  WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
 import { Server } from 'http';
 import * as fs from 'fs';
-import { FirePlaceService } from './fireplace.service';
 const hbs = require('hbs')
+hbs.registerHelper("inc", function (value, options) {
+  return parseInt(value) + 1;
+});
 
 @WebSocketGateway({
   cors: {
@@ -22,7 +22,7 @@ export class FirePlaceSendGateway {
   @WebSocketServer() server: Server;
 
   send(firePlaces) {
-    let html = this.template({firePlaces: firePlaces})
+    let html = this.template({ firePlaces: firePlaces })
     this.server.emit('msgToClient', html);
   }
 
@@ -31,6 +31,6 @@ export class FirePlaceSendGateway {
   }
 
   restart() {
-      this.server.emit("msgToClientRestart", true);
+    this.server.emit("msgToClientRestart", true);
   }
 }

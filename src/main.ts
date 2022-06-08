@@ -12,13 +12,13 @@ async function bootstrap() {
     AppModule,
   );
 
-  hbsutils.registerPartials(__dirname+"/../views");
-  hbsutils.registerWatchedPartials(__dirname+"/../views");
+  hbsutils.registerPartials(__dirname + "/../views");
+  hbsutils.registerWatchedPartials(__dirname + "/../views");
   app.use(cors())
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');
 
-  await app.listen(3000);
+  await app.listen(3300);
 }
 bootstrap();
