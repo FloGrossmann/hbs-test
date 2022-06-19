@@ -96,7 +96,12 @@ export class FirePlaceService {
     }
 
     if (turnOnSlabs) {
-      this.firePlaces.forEach(fireplace => fireplace.slabClass = 'slab-on');
+      this.firePlaces.forEach(fireplace => {
+        fireplace.slabClass = 'slab-on';
+        fireplace.value = Math.round(Math.random()) === 1;
+        fireplace.class = fireplace.value ? 'firepot firepot-on' : 'firepot firepot-off';
+      });
+
     }
 
     this.firePlaceSendGateway.send(this.firePlaces);
